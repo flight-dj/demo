@@ -1,0 +1,75 @@
+##logging:
+##  config: classpath:logback-spring.xml
+#
+##dubbo:
+##  application:
+##    name: test
+##  registry:
+##    address: nacos://127.0.0.1:8848
+##  provider:
+##    timeout: 5000
+##  protocol:
+##    name: dubbo
+##    port: 20805 #dubbo服务暴露的端口
+
+spring:
+    application:
+      name: test
+    cloud:
+      sentinel:
+        transport:
+          dashboard: 127.0.0.1:8080
+        eager: true
+
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/flowable-spring-boot?characterEncoding=UTF-8
+#    username: root
+#    password: root
+#flowable:
+#  #关闭定时任务JOB
+#  async-executor-activate: false
+
+server:
+  port: 8010
+#
+## log config
+##logging:
+##  config:
+##    classpath: logback.xml
+#
+#### xxl-job admin address list, such as "http://address" or "http://address01,http://address02"
+##xxl:
+##  job:
+##    admin:
+##      addresses: http://127.0.0.1:8083/xxl-job-admin
+##    executor:
+##      ip:
+##      port: 9999
+##      appname: test
+##      logpath: /data/applogs/xxl-job/jobhandler
+##      logretentiondays: 30
+##    accessToken:
+#
+#apollo:
+#  bootstrap:
+#    enabled: true
+#  namespaces: application
+#
+###job
+##elastic-job:
+##  server:
+##    namespace: elasticjob-lite-springboot
+##    list: 127.0.0.1:2181
+##  shardingTotalCount: 1
+##  cron:
+##    simpleJob: 0 0 0 1/1 * ?
+
+#spring:
+#  data:
+#    mongodb:
+#      database: test
+#      host: 127.0.0.1
+##      password: root
+#      port: 27017
+#      username: root
+#      uri: mongodb://localhost:27017/test
